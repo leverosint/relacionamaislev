@@ -1,0 +1,153 @@
+@import "fonts";
+@import "class";
+
+// =================================================
+// COMPONENTE: acelerarLeveros
+// =================================================
+.acelerarLeveros {
+    
+    // =====================
+    // Header Section
+    // =====================
+    &__header {
+        // Gradient background - Desktop
+        background: radial-gradient(53.06% 112.41% at 25.66% 149.57%, rgba(111, 255, 175, 0.5) 0%, rgba(111, 255, 175, 0) 100%), 
+                    radial-gradient(75.83% 89.12% at 83.71% -23.55%, #73B1B2 0%, rgba(115, 177, 178, 0) 74.36%), 
+                    #005A64;
+        
+        // Gradient background - Mobile
+        @media(max-width: 1024px) {
+            background: radial-gradient(141.51% 155.63% at -7.73% 174.2%, rgba(111, 255, 175, 0.5) 0%, rgba(111, 255, 175, 0) 100%), 
+                        radial-gradient(71.47% 85.8% at 85.47% 0%, #73B1B2 0%, rgba(115, 177, 178, 0) 74.36%), 
+                        #005A64;
+        }
+
+        // Image animation
+        picture {
+            img {
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
+                
+                &.loaded {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    // =====================
+    // Developing Future Section
+    // =====================
+    &__developingFuture {
+        
+        // Title animation
+        &__title {
+            position: relative;
+            top: 10px;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+            
+            &.loaded {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        // Text animation
+        &__text {
+            position: relative;
+            top: 10px;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+            
+            &.loaded {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        // Div text animation
+        &__divText {
+            position: relative;
+            top: 10px;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+            
+            &.loaded {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        // Link animation
+        &__link {
+            position: relative;
+            top: 10px;
+            opacity: 0;
+            transition: top .5s ease-in-out, opacity .5s ease-in-out, scale .1s;
+            
+            &.loaded {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        // HR line animation
+        .nv-hr {
+            position: relative;
+            top: 10px;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+            
+            &.loaded {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        // Topic badge component
+        &__topic {
+            // Container styles
+            max-width: max-content;
+            display: inline-flex;
+            vertical-align: middle;
+            align-items: center;
+            border-radius: 30px;
+            background: linear-gradient(270deg, #4CDDDD 0%, #6FFFAF 100%);
+            padding: 2px 10px 3px 10px;
+
+            @media(max-width: 1024px) {
+                padding: 1px 6px 1px 6px;
+            }
+
+            // Icon styles
+            svg {
+                min-width: 20px;
+                min-height: 19px;
+                position: relative;
+                top: 1px;
+
+                @media(max-width: 1024px) {
+                    min-width: 14px;
+                    top: 0;
+                }
+            }
+
+            // Text styles
+            &__text {
+                font-family: 'Verdana', Arial, sans-serif;
+                font-weight: 500;
+                color: #002D32;
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: -0.02em;
+                margin-bottom: 0 !important;
+                
+                @media(max-width: 1024px) {
+                    font-size: 10px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+}
